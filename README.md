@@ -58,7 +58,7 @@ Follow these steps to set up the project locally:
 
 Create a `.env` file in the `frontend` directory with the following variables:
 ```env
-API_URL=http://localhost:5000/api
+VITE_API_URL=http://localhost:5000/api
 VITE_BUDGET_LIMIT=1000
 ```
 
