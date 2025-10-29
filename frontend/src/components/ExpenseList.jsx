@@ -46,14 +46,7 @@ function ExpenseList({ expenses, onExpenseDeleted }) {
                   {exp.description.charAt(0).toUpperCase() +
                     exp.description.slice(1)}
                   : ${exp.amount}
-                  <button
-                    onClick={() => handleDelete(exp._id)}
-                    style={{
-                      background: "none",
-                      border: "none",
-                      cursor: "pointer",
-                    }}
-                  >
+                  <button onClick={() => handleDelete(exp._id)}>
                     <DeleteIcon />
                   </button>
                 </div>

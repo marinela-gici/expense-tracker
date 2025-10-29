@@ -15,7 +15,6 @@ This is a **Vite + React + Node.js** full-stack application designed to manage e
 - [Technologies Used](#technologies-used)
 - [Decisions Made](#decisions-made)
 - [Time Spent](#time-spent)
-- [Challenges](#challenges)
 
 ---
 
@@ -177,11 +176,5 @@ expense-tracker/
 ## Time Spent
 
 - Total: 4.5 hours
-
----
-
-## Challenges
-
-- 
 
 ---
