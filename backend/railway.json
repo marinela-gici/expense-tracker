@@ -1,19 +1,14 @@
 {
-  "$schema": "https://railway.com/railway.schema.json",
   "build": {
-    "builder": "RAILPACK"
+    "builder": "NIXPACKS",
+    "buildCommand": "npm install && npm run build",
+    "startCommand": "node server.js",
+    "outputDirectory": "."
   },
-  "deploy": {
-    "runtime": "V2",
-    "numReplicas": 1,
-    "sleepApplication": false,
-    "useLegacyStacker": false,
-    "multiRegionConfig": {
-      "us-west2": {
-        "numReplicas": 1
-      }
-    },
-    "restartPolicyType": "ON_FAILURE",
-    "restartPolicyMaxRetries": 10
-  }
+  "services": [
+    {
+      "name": "expense-tracker",
+      "type": "web"
+    }
+  ]
 }
