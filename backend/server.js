@@ -8,7 +8,9 @@ import expenseRoutes from "./routes/expenseRoutes.js";
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: '*'
+}));
 app.use(express.json());
 
 app.use("/api/categories", categoryRoutes);
@@ -20,7 +22,9 @@ mongoose
   .catch((err) => console.error("MongoDB connection error:", err.message));
 
 app.get("/", (req, res) => {
-  return res.status(200).json({ ok: true, data: "Expense Tracker API Running" });
+  return res
+    .status(200)
+    .json({ ok: true, data: "Expense Tracker API Running" });
 });
 
 const PORT = process.env.PORT || 5000;
